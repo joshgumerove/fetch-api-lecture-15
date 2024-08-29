@@ -3,8 +3,6 @@ const tableBody = document.querySelector("tbody");
 fetch("https://swapi.dev/api/people")
   .then((res) => res.json())
   .then((data) => {
-    console.log("here is data: ", data.results);
-    console.log("here is data as obj: ", data);
     data.results.forEach((character) => {
       console.log(character);
       const row = document.createElement("tr");
